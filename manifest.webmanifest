@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "Luck's Style | Barbearia desde 2017",
+  "short_name": "Luck's Style",
+  "description": "Corte, barba, luzes e tratamentos em Vila Matilde. Agende pelo WhatsApp.",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "categories": ["lifestyle", "beauty"],
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Agendar horário", "url": "./#agendar", "icons": [{"src": "icon-192.png", "sizes": "192x192"}]},
+    {"name": "Galeria", "url": "./#galeria", "icons": [{"src": "icon-192.png", "sizes": "192x192"}]}
+  ]
+}
