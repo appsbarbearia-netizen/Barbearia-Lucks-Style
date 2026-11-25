@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<title>Luck's Style | Barbearia desde 2017</title>
+<meta name="description" content="Barbearia Luck's Style em Vila Matilde (SP), desde 2017. Corte, barba, luzes e tratamentos. Veja preços, trabalhos e agende pelo WhatsApp.">
+<link rel="manifest" href="manifest.webmanifest?v=5">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Luck's Style">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Luck's Style | Barbearia desde 2017">
+<meta property="og:description" content="Corte, barba, luzes e tratamentos em Vila Matilde. Agende pelo WhatsApp.">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --bg:#0a0a0a;--panel:#151515;--panel2:#1a1912;--bg-rgb:10,10,10;--gold-rgb:248,210,34;
+  --gold:#f8d222;--gold2:#fae16f;--text:#f7f4ed;--muted:#a8a39a;
+  --line:rgba(var(--gold-rgb),.22);
+  --safe-top:env(safe-area-inset-top,0px);--safe-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,a,input,select{font:inherit}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[hidden]{display:none!important}
+.app{max-width:480px;margin:auto;min-height:100vh;padding-bottom:calc(88px + var(--safe-bottom));background:radial-gradient(ellipse at 50% -10%,rgba(var(--gold-rgb),.12),transparent 38%),var(--bg)}
+header{position:sticky;top:0;z-index:10;background:rgba(var(--bg-rgb),.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:calc(10px + var(--safe-top)) 18px 10px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand img{width:44px;height:44px;object-fit:cover;border-radius:50%;border:1px solid var(--gold);background:#000;flex:none}
+.brand strong{display:block;letter-spacing:1.5px;color:var(--gold2);font-family:Georgia,serif;font-size:19px}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.install-btn{display:inline-flex;align-items:center;gap:6px;flex:none;border:1px solid var(--gold);background:transparent;color:var(--gold2);border-radius:99px;padding:9px 13px;font-size:12px;font-weight:700;cursor:pointer}
+.install-btn svg{width:15px;height:15px}
+section{padding:22px 18px}
+.hero{padding-top:12px;padding-bottom:10px}
+.hero-card{border:1px solid rgba(var(--gold-rgb),.35);border-radius:20px;overflow:hidden;background:linear-gradient(145deg,#201b11,#0d0d0d 70%);position:relative;display:flex;flex-direction:column;justify-content:center;padding:22px 19px}
+.hero-card:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 85% 15%,rgba(var(--gold-rgb),.16),transparent 45%),linear-gradient(135deg,rgba(var(--gold-rgb),.07),transparent 60%)}
+.hero-content{position:relative;z-index:1}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase}
+.hero h1{font:bold 29px/1.06 Georgia,serif;margin:8px 0}
+.hero p{color:#d0cbc1;font-size:13px;line-height:1.5;margin:0 0 14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;border-radius:13px;padding:14px 18px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17120a;font-weight:800;font-size:13px;letter-spacing:.4px;cursor:pointer}
+.btn.secondary{background:transparent;border:1px solid var(--gold);color:var(--gold2)}
+.btn.block{width:100%}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px;gap:10px}
+.section-head h2{margin:0;font:bold 23px Georgia,serif}
+.section-head span,.section-head a{font-size:11px;color:var(--gold);letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.services{display:grid;gap:9px}
+#secServicos[hidden]{display:none}
+.service .price{white-space:nowrap;text-align:right;font-weight:800;color:var(--gold2)}
+.service .price small{font-size:10px;font-weight:400;margin:0}
+.service{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.service strong{font-size:14px}
+.service small{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+.price{color:var(--gold2);font-weight:800;white-space:nowrap}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.gallery img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 28%;border-radius:13px;border:1px solid var(--line);display:block;background:#111}
+.gallery-more{margin-top:14px}
+.team{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.member{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:18px 10px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.member .mono{position:relative;overflow:hidden;width:84px;height:84px;border-radius:50%;border:1px solid var(--gold);background:linear-gradient(145deg,#201b11,#0d0d0d);color:var(--gold2);display:grid;place-items:center;font:bold 19px Georgia,serif;letter-spacing:1px}
+.member .mono img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.member strong{font-size:14px;line-height:1.25}
+.member small{color:var(--muted);font-size:12px}
+.loyalty{border:1px solid var(--gold);border-radius:18px;padding:19px;background:linear-gradient(135deg,#211b0e,#111);text-align:center}
+.loyalty .stars{color:var(--gold);font-size:25px;letter-spacing:7px;margin:9px}
+.loyalty h3{font:bold 22px Georgia,serif;color:var(--gold2);margin:4px}
+.loyalty p{color:#c7c0b2;font-size:13px;line-height:1.5}
+.loyalty strong{color:var(--gold2)}
+.install-card{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--panel)}
+.install-card img{width:56px;height:56px;border-radius:14px;flex:none;border:1px solid var(--line)}
+.install-card h3{margin:0 0 3px;font:bold 16px Georgia,serif;color:var(--gold2)}
+.install-card p{margin:0;font-size:12px;color:var(--muted);line-height:1.4}
+.install-card .btn{padding:11px 14px;flex:none}
+.contact{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+.contact p{font-size:13px;color:#d2ccc1;line-height:1.6;margin:0 0 10px}
+.contact a{color:var(--gold2);text-decoration:none}
+.contact a.btn{color:#17120a}
+.contact a.btn.secondary{color:var(--gold2)}
+.contact .btn{margin-top:4px}
+.contact .btn+.btn{margin-top:8px}
+.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,480px);display:grid;grid-template-columns:repeat(3,1fr);padding:9px 8px calc(9px + var(--safe-bottom));background:rgba(17,17,17,.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid var(--line);z-index:20}
+.bottom a{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:#9a948a;font-size:11px;padding:5px 2px}
+.bottom svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.bottom a[aria-current="page"]{color:var(--gold2)}
+.screen{display:none}
+.screen.active{display:block}
+.screen h2:focus{outline:none}
+.booking{display:grid;gap:14px}
+.booking label{font-size:12px;color:var(--gold2);letter-spacing:1px;text-transform:uppercase}
+.booking input,.booking select{display:block;width:100%;margin-top:6px;padding:13px;border:1px solid var(--line);border-radius:11px;background:#171717;color:#fff;font-size:16px}
+.booking .hint{display:block;margin-top:5px;font-size:12px;color:#e0a96a;text-transform:none;letter-spacing:0}
+.rules{margin:14px 0 0;padding:0;list-style:none}
+.rules li{font-size:12px;color:var(--muted);line-height:1.5;padding-left:16px;position:relative;margin-top:4px}
+.rules li:before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:9px;top:3px}
+.note{font-size:12px;color:var(--muted);line-height:1.5;margin-top:12px}
+dialog.sheet{width:min(92vw,420px);border:1px solid var(--gold);border-radius:20px;background:#121212;color:var(--text);padding:22px 20px 18px}
+dialog.sheet::backdrop{background:rgba(0,0,0,.72)}
+.sheet h3{margin:0 0 6px;font:bold 21px Georgia,serif;color:var(--gold2)}
+.sheet p{margin:0 0 12px;font-size:13px;color:#cfc9be;line-height:1.5}
+.sheet ol{margin:0 0 16px;padding-left:20px;font-size:14px;line-height:1.7;color:#e8e3d8}
+.sheet strong{color:var(--gold2)}
+@media(min-width:600px){
+  body{padding:20px 0}
+  .app{border:1px solid #242018;border-radius:24px;overflow:hidden;min-height:calc(100vh - 40px)}
+  .bottom{bottom:20px;border-radius:0 0 24px 24px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "HairSalon", "name": "Luck's Style", "description": "Barbearia: cortes, barba e sobrancelha.", "telephone": "+5511970941300", "address": {"@type": "PostalAddress", "streetAddress": "Av. Waldemar Carlos Pereira, 1886", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR"}, "sameAs": ["https://instagram.com/barbearialucksstyle"]}
+</script>
+</head>
+<body>
+<main class="app">
+
+<header>
+  <div class="brand">
+    <img src="icon-192.png" width="44" height="44" alt="Logo Luck's Style">
+    <div><strong>LUCK'S STYLE</strong><small>Desde 2017</small></div>
+  </div>
+  <button class="install-btn" type="button" data-install hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+    Baixar app
+  </button>
+</header>
+
+<!-- INÍCIO -->
+<div id="home" class="screen active">
+  <section class="hero">
+    <div class="hero-card"><div class="hero-content">
+      <div class="eyebrow">Barbearia • Vila Matilde</div>
+      <h1>Cuidando do<br>seu estilo.</h1>
+      <p>Técnica, atenção aos detalhes e atendimento personalizado. Mais do que um corte: a confiança de estar sempre bem apresentado.</p>
+      <a class="btn" href="#agendar">AGENDAR MEU HORÁRIO&nbsp; →</a>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Vitrine Luck's Style</h2><span>Trabalhos reais</span></div>
+    <div class="gallery" id="vitrine"></div>
+    <a class="btn secondary block gallery-more" href="https://www.instagram.com/barbearialucksstyle" target="_blank" rel="noopener noreferrer">VER GALERIA COMPLETA</a>
+  </section>
+
+  <section id="secServicos" hidden>
+    <div class="section-head"><h2>Serviços e preços</h2><span>Valores</span></div>
+    <div class="services" id="servicosLista"></div>
+  </section>
+
+  <section id="secEquipe" hidden>
+    <div class="section-head"><h2>Nossos especialistas</h2><span>Equipe</span></div>
+    <div class="team" id="equipe"></div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Encontre a gente</h2><span>Contato</span></div>
+    <div class="contact" id="contato"></div>
+  </section>
+</div>
+
+<!-- AGENDAR -->
+<div id="agendar" class="screen">
+  <section>
+    <div class="section-head"><h2 tabindex="-1">Agende seu horário</h2><span>Reserva</span></div>
+    <form class="booking" id="booking" novalidate>
+      <label>Seu nome<input id="nome" required autocomplete="given-name" placeholder="Como podemos te chamar?"></label>
+      <label>Serviço<select id="servico"></select></label>
+      <label>Data<input id="data" type="date" required><span class="hint" id="dataHint" hidden></span></label>
+      <label>Horário<select id="hora"></select></label>
+      <button class="btn" type="submit">CONTINUAR PELO WHATSAPP →</button>
+    </form>
+    <ul class="rules" id="regras"></ul>
+    <p class="note">Seu pedido é enviado pelo WhatsApp. O horário só fica garantido depois da confirmação da barbearia.</p>
+  </section>
+</div>
+
+<!-- GALERIA -->
+<div id="galeria" class="screen">
+  <section>
+    <div class="section-head"><h2 tabindex="-1">Nosso portfólio</h2><span>Luck's Style</span></div>
+    <div class="gallery" id="galeriaGrid"></div>
+  </section>
+</div>
+
+<noscript><section><p class="note">Ative o JavaScript para ver o app. Enquanto isso, fale com a gente: <a href="https://wa.me/5511970941300">WhatsApp (11) 97094-1300</a>.</p></section></noscript>
+
+<nav class="bottom" aria-label="Navegação principal">
+  <a href="#home" data-screen="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Início</a>
+  <a href="#agendar" data-screen="agendar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Agendar</a>
+  <a href="#galeria" data-screen="galeria"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>Galeria</a>
+</nav>
+</main>
+
+<!-- Como instalar -->
+<dialog class="sheet" id="installSheet" aria-labelledby="installTitle">
+  <h3 id="installTitle">Instalar o app</h3>
+  <p id="installIntro"></p>
+  <ol id="installSteps"></ol>
+  <button class="btn block" type="button" id="installClose">ENTENDI</button>
+</dialog>
+
+<script>
+/* Configuração do cliente (gerada pelo build a partir de config.json) */
+var H=function(a,b){var r=[];for(var i=a;i<=b;i++)r.push((i<10?"0":"")+i+":00");return r};
+window.BARBEARIA = {
+  "nome": "Luck's Style",
+  "whatsapp": "5511970941300",
+  "whatsappExibicao": "(11) 97094-1300",
+  "instagram": "barbearialucksstyle",
+  "endereco": "Av. Waldemar Carlos Pereira, 1886 — Vila Matilde",
+  "mapaUrl": "https://www.google.com/maps/search/?api=1&query=Av.+Waldemar+Carlos+Pereira%2C+1886+Vila+Matilde+S%C3%A3o+Paulo",
+  "horarioFuncionamento": "Terça a sexta, 10h às 20h • Sábado, 9h às 18h",
+  "diasFechados": [0, 1],
+  "horarios": H(10,19),
+  "servicos": [
+    {"nome": "Corte", "preco": 45},
+    {"nome": "Barba", "preco": 40},
+    {"nome": "Corte Raspado", "preco": 35},
+    {"nome": "Primeiro Corte", "preco": 34.99, "nota": "Válido no primeiro atendimento"},
+    {"nome": "Pezinho", "preco": 15},
+    {"nome": "Luzes", "preco": 88, "aPartir": true},
+    {"nome": "Choque Redutor de Frizz", "preco": 65},
+    {"nome": "Hidratação Capilar Vapor de Ozônio", "preco": 50},
+    {"nome": "Argiloterapia Facial", "preco": 45},
+    {"nome": "Limpeza de Pele Vapor de Ozônio", "preco": 45},
+    {"nome": "Coloração de Grisalhos (cabelo ou barba)", "preco": 35},
+    {"nome": "Depilação na Cera (nariz ou orelha)", "preco": 20}
+  ],
+  "regras": [],
+  "horariosPorDia": {"2": H(10,19), "3": H(10,19), "4": H(10,19), "5": H(10,19), "6": H(9,17)},
+  "mostrarPrecos": true,
+  "equipe": [
+    {"iniciais": "LP", "foto": "equipe-lucas-paulo.webp", "nome": "Lucas Paulo", "funcao": "Barbeiro"},
+    {"iniciais": "MA", "foto": "equipe-marques-alexandre.webp", "nome": "Marques Alexandre", "funcao": "Barbeiro"},
+    {"iniciais": "TS", "foto": "equipe-th-santos.webp", "nome": "TH Santos", "funcao": "Barbeiro"},
+    {"iniciais": "GC", "foto": "equipe-gabriel-choque.webp", "nome": "Gabriel Choque", "funcao": "Barbeiro"}
+  ],
+  "vitrine": [
+    {"src": "social-degrade.webp", "alt": "Social com degradê"},
+    {"src": "degrade-risquinho.webp", "alt": "Degradê com risquinho"},
+    {"src": "desenho-nuca.webp", "alt": "Desenho na nuca"},
+    {"src": "cabelo-azul-infantil.webp", "alt": "Corte infantil com coloração azul"},
+    {"src": "coloracao-dourada.webp", "alt": "Coloração dourada"},
+    {"src": "degrade-baixo.webp", "alt": "Degradê baixo"}
+  ],
+  "galeria": [
+    "social-degrade.webp|Social Degradê",
+    "degrade-risquinho.webp|Degradê Risquinho",
+    "desenho-nuca.webp|Desenho na Nuca",
+    "cabelo-azul-infantil.webp|Infantil Azul",
+    "coloracao-dourada.webp|Coloração Dourada",
+    "degrade-baixo.webp|Degradê Baixo"
+  ]
+};
+
+(function () {
+  "use strict";
+  var C = window.BARBEARIA;
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var brl = function (n) { return "R$ " + Number(n).toFixed(2).replace(".", ","); };
+
+  /* ---------- Conteúdo a partir da config ---------- */
+  function imgTag(src, alt, pos) {
+    var style = pos ? ' style="object-position:' + pos + '"' : "";
+    return '<img src="' + src + '" alt="' + alt + '" width="360" height="480" loading="lazy" decoding="async" onerror="this.style.display=\'none\'"' + style + ">";
+  }
+  $("#vitrine").innerHTML = C.vitrine.map(function (f) { return imgTag(f.src, f.alt, f.pos); }).join("");
+  $("#galeriaGrid").innerHTML = C.galeria.map(function (l) {
+    var p = l.split("|"); return imgTag(p[0], p[1] || "Trabalho da " + C.nome);
+  }).join("");
+  $("#servico").innerHTML = C.servicos.map(function (s) {
+    return "<option>" + s.nome + "</option>";
+  }).join("");
+  if (C.mostrarPrecos) {
+    $("#secServicos").hidden = false;
+    $("#servicosLista").innerHTML = C.servicos.map(function (s) {
+      return '<div class="service"><div><strong>' + s.nome + '</strong>' + (s.nota ? '<small>' + s.nota + '</small>' : '') + '</div><span class="price">' + (s.aPartir ? '<small>a partir de</small>' : '') + brl(s.preco) + '</span></div>';
+    }).join("");
+  }
+  if (C.equipe && C.equipe.length) {
+    $("#secEquipe").hidden = false;
+    $("#equipe").innerHTML = C.equipe.map(function (m) {
+      return '<div class="member"><div class="mono">' + m.iniciais + (m.foto ? '<img src="' + m.foto + '" alt="Retrato de ' + m.nome + '" width="84" height="84" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '') + '</div><strong>' + m.nome + '</strong><small>' + m.funcao + '</small></div>';
+    }).join("");
+  }
+  $("#regras").innerHTML = (C.regras || []).map(function (r) { return "<li>" + r + "</li>"; }).join("");
+
+  var wa = "https://wa.me/" + C.whatsapp;
+  $("#contato").innerHTML =
+    "<p>📍 " + C.endereco + ' — <a href="' + C.mapaUrl + '" target="_blank" rel="noopener">ver no mapa</a></p>' +
+    (C.horarioFuncionamento ? "<p>🕘 " + C.horarioFuncionamento + "</p>" : "") +
+    '<p>📸 Instagram: <a href="https://instagram.com/' + C.instagram + '" target="_blank" rel="noopener">@' + C.instagram + "</a></p>" +
+    '<p>📲 WhatsApp: <a href="' + wa + '" target="_blank" rel="noopener">' + C.whatsappExibicao + "</a></p>" +
+    '<a class="btn block" href="' + wa + "?text=" + encodeURIComponent("Olá, quero agendar um horário na " + C.nome + ".") + '" target="_blank" rel="noopener">FALAR NO WHATSAPP</a>' +
+    '<a class="btn secondary block" href="https://www.instagram.com/' + C.instagram + '" target="_blank" rel="noopener">ABRIR NO INSTAGRAM</a>';
+
+  /* ---------- Navegação (hash) ---------- */
+  var screens = ["home", "agendar", "galeria"];
+  function route() {
+    var id = location.hash.replace("#", "");
+    if (screens.indexOf(id) < 0) id = "home";
+    $$(".screen").forEach(function (s) { s.classList.toggle("active", s.id === id); });
+    $$(".bottom a").forEach(function (a) {
+      if (a.dataset.screen === id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    window.scrollTo(0, 0);
+    var h = $("#" + id + " h2[tabindex], #" + id + " h3[tabindex]");
+    if (h && document.readyState === "complete") h.focus({ preventScroll: true });
+  }
+  window.addEventListener("hashchange", route);
+  route();
+
+  /* ---------- Agendamento ---------- */
+  var dataEl = $("#data"), horaEl = $("#hora"), hint = $("#dataHint");
+  function iso(d) { return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); }
+  dataEl.min = iso(new Date());
+
+  function fillHours() {
+    var now = new Date(), v = dataEl.value, slots = C.horarios.slice();
+    hint.hidden = true; dataEl.setCustomValidity("");
+    if (v) {
+      var d = new Date(v + "T12:00:00");
+      if (C.horariosPorDia && C.horariosPorDia[d.getDay()]) slots = C.horariosPorDia[d.getDay()].slice();
+      if (C.diasFechados.indexOf(d.getDay()) >= 0) {
+        slots = []; hint.textContent = "Fechado neste dia. Escolha outra data."; hint.hidden = false;
+        dataEl.setCustomValidity("Dia fechado");
+      } else if (v === iso(now)) {
+        slots = slots.filter(function (h) {
+          var p = h.split(":"); var t = new Date(); t.setHours(+p[0], +p[1], 0, 0); return t > now;
+        });
+        if (!slots.length) { hint.textContent = "Não há mais horários hoje. Escolha outra data."; hint.hidden = false; }
+      }
+    }
+    horaEl.innerHTML = slots.length ? slots.map(function (h) { return "<option>" + h + "</option>"; }).join("") : "<option value=''>Sem horários</option>";
+    horaEl.disabled = !slots.length;
+  }
+  dataEl.addEventListener("change", fillHours);
+  fillHours();
+
+  $("#booking").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var nome = $("#nome").value.trim();
+    if (!nome) { $("#nome").focus(); return; }
+    if (!dataEl.value) { dataEl.focus(); return; }
+    if (!dataEl.checkValidity() || horaEl.disabled || !horaEl.value) { dataEl.focus(); return; }
+    var d = new Date(dataEl.value + "T12:00:00").toLocaleDateString("pt-BR");
+    var texto = [
+      "Olá, " + C.nome + "! Quero solicitar um agendamento.", "",
+      "Nome: " + nome,
+      "Serviço: " + $("#servico").value,
+      "Data: " + d,
+      "Horário desejado: " + horaEl.value, "",
+      "Podem confirmar a disponibilidade?"
+    ].join("\n");
+    var a = document.createElement("a");
+    a.href = wa + "?text=" + encodeURIComponent(texto);
+    a.target = "_blank"; a.rel = "noopener";
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+
+  /* Remove apenas o worker antigo desta pasta; este pacote não usa cache offline. */
+  if ("serviceWorker" in navigator) {
+    var appScope = new URL("./", location.href).href;
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      registrations.forEach(function (registration) {
+        if (registration.scope === appScope) registration.unregister();
+      });
+    }).catch(function () {});
+  }
+
+  /* ---------- Instalar app (PWA) ---------- */
+  var deferred = null;
+  var ua = navigator.userAgent || "";
+  var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var inApp = /Instagram|FBAN|FBAV|FB_IAB|Line\/|MicroMessenger|TikTok/i.test(ua);
+  var isAndroid = /Android/.test(ua);
+  function isInstalled() {
+    return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+  }
+  function syncInstallUI() {
+    var show = !isInstalled();
+    $$("[data-install]").forEach(function (b) { b.hidden = !show; });
+    $$("[data-install-section]").forEach(function (s) { s.hidden = !show; });
+  }
+  syncInstallUI();
+  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); deferred = e; });
+  window.addEventListener("appinstalled", function () { deferred = null; $$("[data-install]").forEach(function (button) { button.hidden = true; }); });
+
+  var sheet = $("#installSheet");
+  function openSheet(titulo, intro, passos) {
+    $("#installTitle").textContent = titulo;
+    $("#installIntro").textContent = intro;
+    $("#installSteps").innerHTML = passos.map(function (p) { return "<li>" + p + "</li>"; }).join("");
+    if (sheet.showModal) sheet.showModal(); else sheet.setAttribute("open", "");
+  }
+  $("#installClose").addEventListener("click", function () { sheet.close ? sheet.close() : sheet.removeAttribute("open"); });
+  sheet.addEventListener("click", function (e) { if (e.target === sheet) sheet.close(); });
+
+  function onInstall() {
+    if (deferred) {
+      var p = deferred;
+      deferred = null;
+      try {
+        Promise.resolve(p.prompt()).then(function () { return p.userChoice; }).then(function (choice) {
+          if (choice.outcome === "accepted") {
+            $$("[data-install]").forEach(function (button) { button.hidden = true; });
+          }
+        }).catch(showInstallHelp);
+      } catch (error) { showInstallHelp(); }
+      return;
+    }
+    showInstallHelp();
+  }
+  function showInstallHelp() {
+    if (inApp) {
+      openSheet("Abra no navegador", "O navegador do Instagram não permite instalar apps. Abra esta página no " + (isIOS ? "Safari" : "Chrome") + ":",
+        ["Toque nos <strong>três pontinhos</strong> (⋯ ou ⋮) no canto da tela", "Escolha <strong>Abrir no navegador</strong>", "Depois toque em <strong>Baixar app</strong> de novo"]);
+    } else if (isIOS) {
+      openSheet("Instalar no iPhone", "No iPhone, a instalação é feita pelo Safari:",
+        ["Abra esta página no <strong>Safari</strong>", "Toque no botão <strong>Compartilhar</strong> (quadrado com seta)", "Escolha <strong>Adicionar à Tela de Início</strong>", "Toque em <strong>Adicionar</strong>"]);
+    } else if (isAndroid) {
+      openSheet("Instalar no Android", "Se a janela de instalação não abriu sozinha, faça pelo Chrome:",
+        ["Toque nos <strong>três pontinhos</strong> (⋮) no canto superior", "Escolha <strong>Instalar app</strong> ou <strong>Adicionar à tela inicial</strong>", "Confira se o <strong>logo " + C.nome + "</strong> aparece antes de confirmar. Se aparecer uma letra, não confirme: publique todos os arquivos PNG e o favicon.ico deste pacote", "Remova o atalho antigo e adicione novamente. Se não for possível instalar, o Chrome pode oferecer apenas Criar atalho"]);
+    } else {
+      openSheet("Instalar no computador", "No Chrome ou Edge:",
+        ["Clique no ícone de <strong>instalar</strong> na barra de endereço", "Ou abra o menu ⋮ e escolha <strong>Instalar " + C.nome + "</strong>"]);
+    }
+  }
+  $$("[data-install]").forEach(function (b) { b.addEventListener("click", onInstall); });
+
+})();
+</script>
+</body>
+</html>
